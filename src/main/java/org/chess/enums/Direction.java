@@ -1,5 +1,6 @@
 package org.chess.enums;
 
+import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
@@ -27,10 +28,21 @@ public enum Direction {
     /**
      * Method for the vertical forward movement
      * Useful for Pawn movement
+     *
      * @return list UP direction
      */
     public static List<Direction> forwardOnly() {
         return Collections.singletonList(UP);
+    }
+
+    /**
+     * Method to return all direction movements
+     * Useful for King, Queen movements
+     *
+     * @return List of all the 8 direction
+     */
+    public static List<Direction> allDirection() {
+        return List.of(values());
     }
 
 }

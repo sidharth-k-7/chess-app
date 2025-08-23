@@ -21,6 +21,10 @@ public class PieceFactory {
         switch (pieceType.trim().toLowerCase()) {
             case "pawn":
                 return new Pawn(position);
+            case "king":
+                return new King(position);
+            case "queen":
+                return new Queen(position);
             default:
                 throw new IllegalArgumentException("Unsupported piece type: " + pieceType);
         }
