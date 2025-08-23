@@ -29,4 +29,8 @@ public class Position {
     public String toString() {
         return "" + col + row;
     }
+
+    public int getRow() {
+        return row;
+    }
 }

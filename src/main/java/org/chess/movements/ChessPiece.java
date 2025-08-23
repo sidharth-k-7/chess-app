@@ -18,6 +18,10 @@ public abstract class ChessPiece implements Movable {
         this.position = position;
     }
 
+    public Position getPosition() {
+        return this.position;
+    }
+
     /**
      * Generates all possible moves for the pieces based on the provided direction.
      * Throws IllegalArgumentException if directions are null.
@@ -37,11 +41,7 @@ public abstract class ChessPiece implements Movable {
             int step = 1;
             while (true) {
                 Position next = position.move(dir.dc * step, dir.dr * step);
-                if (next == null || !next.isValid()){
-                    System.out.println("No valid moves available at the " +
-                            "given position. Try some other.!");
-                    break;
-                }
+                if (next == null || !next.isValid()) break;
                 moves.add(next.toString());
                 if (singleStep) break;
                 step++;
