@@ -18,7 +18,7 @@ public class Pawn extends ChessPiece{
         Position position = getPosition();
         if(position.getRow()==8){
             System.out.println("No valid moves available at the " +
-                    "given position. Try some other.!");
+                    "given position. Try some other position.!");
             return Collections.emptyList();
         }
         return generateMoves(Direction.forwardOnly(), true);

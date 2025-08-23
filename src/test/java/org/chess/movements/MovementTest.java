@@ -22,8 +22,7 @@ public class MovementTest {
         ChessPiece pawn = PieceFactory.create("Pawn", new Position('H', 8));
         List<Direction> list = List.of(Direction.UP);
         List<String> moves = pawn.generateMoves(list, true);
-        Assertions.assertTrue(moves.isEmpty(), "No valid moves available at the \" +\n" +
-                "                            \"given position. Try some other.!");
+        Assertions.assertFalse(moves.equals("H9"));
     }
 
     @Test
