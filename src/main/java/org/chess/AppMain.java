@@ -1,6 +1,5 @@
 package org.chess;
 
-import org.chess.models.Position;
 import org.chess.movements.ChessPiece;
 import org.chess.movements.PieceFactory;
 import org.chess.utils.Validator;

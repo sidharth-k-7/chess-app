@@ -4,8 +4,6 @@ package org.chess.movements;
 import org.chess.enums.Direction;
 import org.chess.models.Position;
 
-import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class King extends ChessPiece {
